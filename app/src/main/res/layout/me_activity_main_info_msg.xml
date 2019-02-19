@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:tag="personal_info_msg">
+
+    <TextView
+        android:id="@+id/personal_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:shadowColor="#4D000000"
+        android:shadowRadius="15"
+        android:textColor="#ffffffff"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        tools:text="棒棒不是本人" />
+
+    <TextView
+        android:id="@+id/personal_chicken_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#4D000000"
+        android:shadowRadius="15"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        tools:text="ID:4567890987" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="9dp">
+
+        <ImageView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_selector_user_small_sex" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/sex"
+            android:background="@drawable/baoji_shap_role_tag"
+            android:gravity="center"
+            android:maxWidth="36dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="#FFFFFFFF"
+            android:textSize="10sp"
+            android:visibility="gone"
+            tools:text="大神"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/personal_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/level"
+            android:background="@drawable/baoji_shape_center_tag_blue"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxWidth="97dp"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="#FFFFFFFF"
+            android:textSize="10sp"
+            android:visibility="gone"
+            tools:text="内蒙古·鄂尔多·厄瓜多尔"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sex"
+            android:layout_marginTop="8dp"
+            android:shadowColor="#4D000000"
+            android:shadowRadius="15"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp"
+            tools:text="4354 粉丝" />
+
+        <TextView
+            android:id="@+id/ordernum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sex"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/fans"
+            android:shadowColor="#4D000000"
+            android:shadowRadius="15"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp"
+            tools:text=" 5654 下单数" />
+
+        <TextView
+            android:id="@+id/personal_relation"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/me_info_follow_shap_1"
+            android:gravity="center"
+            android:textColor="#FF282828"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="相互关注"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+    <com.example.siy.myapplication.support.ImageIndicator
+        android:id="@+id/personal_figure_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        app:interval="4dp"
+        app:num="6"
+        app:selected="0"
+        app:selected_color="@color/white"
+        app:unselected_color="#FF9B9B9B"
+        app:width="5dp" />
+</LinearLayout>

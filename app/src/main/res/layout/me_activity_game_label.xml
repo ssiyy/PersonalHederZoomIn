@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.siy.myapplication.support.DisInterceptNestedScrollView2 xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="68dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="15dp"
+            android:text="Ta的技能"
+            android:textColor="#FF4A4A4A"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <com.example.siy.myapplication.support.OrderLinearlayout
+            android:id="@+id/honorary_ll"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="@color/common_bg_color"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-8dp"
+                android:background="@drawable/honorary_title" />
+
+            <TextView
+                android:id="@+id/honorary_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:background="@drawable/honorary_itle_bg"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:maxWidth="328dp"
+                android:minWidth="202dp"
+                android:paddingLeft="38dp"
+                android:paddingRight="38dp"
+                android:singleLine="true"
+                android:text="S4国服第一刚强王S4"
+                android:textColor="#FF282828"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="14sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />
+        </com.example.siy.myapplication.support.OrderLinearlayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/game_service_info_shap"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/servcie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="暂无数据"
+                android:textColor="#FF282828"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/service_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/servcie_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/me_personal_ablum_shap"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/service_img"
+                    android:layout_width="112dp"
+                    android:layout_height="62dp"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/personal_boy_label_2_3" />
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/service_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/service_frame"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/service_frame"
+                android:text="认证段位：暂无数据"
+                android:textColor="#FF282828"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/service_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/service_rank"
+                android:layout_alignLeft="@id/service_rank"
+                android:layout_marginTop="4dp"
+                android:text="订单总数：暂无数据"
+                android:textColor="#FF282828"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <com.example.siy.myapplication.support.PersonalInfoLabelView
+            android:id="@+id/info_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</com.example.siy.myapplication.support.DisInterceptNestedScrollView2>

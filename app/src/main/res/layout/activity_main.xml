@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/err_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_back_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="TA好像去外太空了"
+            android:textColor="#66000000"
+            android:textSize="15sp" />
+
+
+        <com.example.siy.myapplication.support.CommonButton
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/common_selector_btn_orange"
+            android:gravity="center"
+            android:text="重新刷新"
+            android:textColor="#282828"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <com.example.siy.myapplication.appbarlayout_support_25_3_1.AppBarLayout
+            android:id="@+id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFFFF"
+            android:orientation="vertical"
+            app:elevation="0dp"
+            app:layout_behavior="com.example.siy.myapplication.support.AppBarLayoutOverScrollViewBehavior">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <include layout="@layout/me_activity_main_info_figure" />
+
+                <include layout="@layout/me_activity_main_info_middle" />
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:color/transparent"
+                    app:contentInsetStart="0dp"
+                    app:popupTheme="@style/Widget.AppCompat.Toolbar" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </com.example.siy.myapplication.appbarlayout_support_25_3_1.AppBarLayout>
+
+        <include layout="@layout/me_activity_main_info_content" />
+
+        <LinearLayout
+            android:id="@+id/bottom_button_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp">
+
+            <com.example.siy.myapplication.support.CommonButton
+                android:id="@+id/talk_with"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="8"
+                android:background="@drawable/common_selector_btn_white"
+                android:gravity="center"
+                android:text="聊一聊"
+                android:textColor="#282828"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.example.siy.myapplication.support.CommonButton
+                android:id="@+id/invitate_with"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="10"
+                android:background="@drawable/common_selector_btn_orange"
+                android:gravity="center"
+                android:text="立即邀约"
+                android:textColor="#282828"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--标题-->
+        <include layout="@layout/me_activity_main_info_toolbar" />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

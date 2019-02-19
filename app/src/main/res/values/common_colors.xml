@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <!-- app主题 -->
+    <color name="common_main_bg">#FFFFFF</color>
+    <color name="common_txt_main">#CC000000</color>
+    <color name="common_txt_sceond">#66000000</color>
+    <color name="common_txt_unselected">#8F8F8F</color>
+
+    <color name="common_btn_purple">#FF9088FC</color>
+    <color name="common_btn_orange">#FF6B47</color>
+    <color name="common_btn_orange_press">#D95636</color>
+    <color name="common_btn_blue">#24CBCF</color>
+    <color name="common_btn_bule_press">#189EB9</color>
+    <color name="common_btn_white">#FFFFFF</color>
+    <color name="common_btn_white_press">#FFDDDDDD</color>
+    <color name="common_btn_gray">#B2B2B2</color>
+    <color name="common_btn_gray_press">#8A8A8A</color>
+    <color name="common_inside_border_color">#FF282828</color>
+
+    <!-- app内通用 -->
+    <color name="itemselect">#f0f0f0</color>
+    <color name="line">#E1E1E1</color>
+    <color name="theme_red">#FFFF2741</color>
+
+    <color name="common_bg_color">@android:color/white</color>
+
+    <!-- 新手引导 -->
+    <color name="guide_bg">#60000000</color>
+    <color name="btn_enable">#FF4A90E2</color>
+</resources>

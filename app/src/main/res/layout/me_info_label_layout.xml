@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_to_more_label_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/empty_tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:text="这位同学还没有打过单子\n成为Ta第一个老板也许会有特别的缘分哦~"
+        android:textColor="#FF9B9B9B"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_to_more_label"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/me_item_background_selector"
+        android:drawableRight="@drawable/me_icon_next"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="17dp"
+        android:text="用户印象"
+        android:textColor="#CC000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/label_layout"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_below="@id/tv_to_more_label"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <View
+            android:id="@+id/me_info_below_bar"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#FFB5B5B5" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/me_info_below_bar"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="27dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="综合评分"
+                android:textColor="#FF282828"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/me_info_evlution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#FF282828"
+                android:textSize="45sp"
+                android:textStyle="bold"
+                tools:text="5.0" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_common"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="32dp"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="评价数"
+                android:textColor="#FF282828"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/commmon_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#FF282828"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="876" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/win_rate_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="27dp"
+            android:layout_toLeftOf="@id/ll_common"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="近50场胜率"
+                android:textColor="#FF282828"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/win_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#FF282828"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="89.5%" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/me_info_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            tools:src="@drawable/personal_girl_label_45_5" />
+
+        <AbsoluteLayout
+            android:id="@+id/al_lables"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent" />
+    </RelativeLayout>
+
+</RelativeLayout>

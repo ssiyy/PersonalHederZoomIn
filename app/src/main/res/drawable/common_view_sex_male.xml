@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="24dp" android:height="16dp">
+        <shape>
+            <solid  android:color="#FF51BEFA" />
+
+            <stroke android:color="@color/common_inside_border_color" android:width="1dp"/>
+
+            <corners android:radius="8dp" />
+        </shape>
+
+    </item>
+    <item android:top="2dp" android:bottom="2dp" android:left="6dp" android:right="6dp">
+        <bitmap android:src="@drawable/common_icon_small_nan_x"/>
+    </item>
+
+</layer-list>

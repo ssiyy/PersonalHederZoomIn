@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/common_bg_color"
+    app:layout_behavior="com.example.siy.myapplication.appbarlayout_support_25_3_1.AppBarLayout$ScrollingViewBehavior">
+
+
+    <com.example.siy.myapplication.support.DisInterceptNestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="61dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/game_indicator_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="16dp"
+                android:layout_alignParentBottom="true"
+                android:background="#FFF2F2F2" />
+
+            <com.example.siy.myapplication.support.ScrollableIndicator
+                android:id="@+id/game_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"/>
+        </RelativeLayout>
+    </com.example.siy.myapplication.support.DisInterceptNestedScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/game_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg_color" />
+</LinearLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="35dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/gift_give_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="送出礼物"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <com.example.siy.myapplication.support.WalletNumberTextView
+                    android:id="@+id/gift_give_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="#282828"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    tools:text="201" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="#F2F2F2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/gift_collect_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收到礼物"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom">
+
+                <com.example.siy.myapplication.support.WalletNumberTextView
+                    android:id="@+id/gift_collect_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="#282828"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    tools:text="201" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.example.siy.myapplication.support.OrderLinearlayout
+            android:id="@+id/to_guard_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_first"
+                android:layout_width="36dp"
+                android:layout_height="46dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/iv_first_hat" />
+
+                <ImageView
+                    android:id="@+id/iv_first"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="2dp"
+                    tools:background="@drawable/userinfo_icon_head_default" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_sec"
+                android:layout_width="36dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="-11dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/iv_sec_hat" />
+
+                <ImageView
+                    android:id="@+id/iv_sec"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="2dp"
+                    tools:background="@drawable/userinfo_icon_head_default" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_third"
+                android:layout_width="36dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="-11dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/iv_third_hat" />
+
+                <ImageView
+                    android:id="@+id/iv_thir"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="2dp"
+                    tools:background="@drawable/userinfo_icon_head_default" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFF6F6F"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="快去守护Ta" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/me_icon_next" />
+
+        </com.example.siy.myapplication.support.OrderLinearlayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/personal_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="16dp"
+        android:background="#F2F2F2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="17dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/me_info_quotation_left" />
+
+        <com.example.siy.myapplication.expandtextview.ExpandableTextView
+            android:id="@+id/personal_signature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxHeight="68dp"
+            android:textColor="#FF282828"
+            android:textSize="12sp"
+            tools:text="实力大神，能刚能苟，针对每场比赛，分析玩家的不足，提升玩家的技术实力。" />
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="17dp"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/me_info_quotation_right" />
+    </LinearLayout>
+
+</LinearLayout>
