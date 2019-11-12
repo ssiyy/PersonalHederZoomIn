@@ -11,7 +11,9 @@
 那难点是那么呢？难点是个支持库版本里面AppBarLayout的实现效果是不一样的。
 
 我项目用的支持包是“27.1.1”版本，放大和缩小的效果有卡顿，有时候放大了就不缩小了。经过网上查找发现支持包“25.3.1”实现效果是我想要的。我不可能项目的支持包为了这一个效果而改成“25.3.1”，我只能把涉及到APPBarLayout的关键代码拷贝一份到项目中去，在多番尝试之后我把所有涉及的关键类都找出来了:
+
 ![20190220104650921](./img/20190220104650921.png)
+
 就这些文件了，把文件拷贝出来还有一个好处就是可以修改源码，为什么要修改源码下面会说到。先说说下拉图片放大缩小效果。
 ## Behavior
 官方的介绍：Interaction behavior plugin for child views of CoordinatorLayout. 作用于CoordinatorLayout的子View的交互行为插件。一个Behavior 实现了用户的一个或者多个交互行为，它们可能包括拖拽、滑动、快滑或者其他一些手势。
@@ -238,7 +240,7 @@
 
 2、需要被缩放的布局需要加上 android:clipChildren="false"    android:clipToPadding="false" 属性。
 ## 自定义snap效果(这个地方就需要修改源码)
-仔细观察上面的效果图，你会发现只要我的手指稍微有一点上滑或者下滑的趋势，视图就会自动向上运动或者向下运动，如果用原生控件自带的snap效果是不行的。app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"中的snap是在用户滑动到AppBarLayout布局高度的一般才会自动上合或者下合，这个我们可以在源码（support-25.3.1）中证实它。
+仔细观察上面的效果图，你会发现只要我的手指稍微有一点上滑或者下滑的趋势，视图就会自动向上运动或者向下运动，如果用原生控件自带的snap效果是不行的。app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"中的snap是在用户滑动到AppBarLayout布局高度的一半才会自动上合或者下合，这个我们可以在源码（support-25.3.1）中证实它。
 ```java
 private void snapToChildIfNeeded(CoordinatorLayout coordinatorLayout, AppBarLayout abl) {
             final int offset = getTopBottomOffsetForScrollingSibling();
